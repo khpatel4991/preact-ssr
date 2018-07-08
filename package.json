@@ -1,0 +1,54 @@
+{
+  "name": "node-jwt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "express": "^4.16.3",
+    "fastify": "^1.7.0",
+    "fastify-static": "^0.12.0",
+    "preact": "^8.2.9",
+    "preact-render-to-string": "^3.7.0"
+  },
+  "scripts": {
+    "build": "webpack",
+    "start": "babel-node express.js & node fastify.js",
+    "start:fastify": "babel-node fastify.js"
+  },
+  "devDependencies": {
+    "autocannon": "^2.4.1",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-preact": "^1.1.0",
+    "css-loader": "^1.0.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              ">0.25%",
+              "not ie 11",
+              "not op_mini all"
+            ]
+          }
+        }
+      ],
+      "preact"
+    ],
+    "plugins": [
+      "transform-class-properties",
+      "transform-runtime"
+    ]
+  }
+}
